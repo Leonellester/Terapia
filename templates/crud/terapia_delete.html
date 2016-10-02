@@ -1,0 +1,10 @@
+{% extends 'base/base.html' %}
+
+{% block content %}
+<form method="post">
+	{% csrf_token %}
+	<h3> ¿ Desea Eliminar el Registro {{lista.id_terapia}} ?</h3>
+	<button class="btm btn-danger" type="submit">Si, Eliminar</button>
+	<a class="btn btn-default" href="{% url 'crud:consultar' %}">Cancelar</a>
+	</form>
+{% endblock %}""

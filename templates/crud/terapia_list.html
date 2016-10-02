@@ -1,0 +1,50 @@
+{% extends 'base/base.html' %}
+
+{% block content %}
+
+<table class="table table-bordered">
+	<thead>
+		<tr>
+			<td>#</td>
+			<td>Id_Terapia</td>
+			<td>Id_Paciente</td>
+			<td>Id_Cita</td>
+			<td>Recibida</td>
+			<td>Acciones</td>
+		</tr>
+		
+	</thead>
+	<tbody>
+		{% if lista %}
+		{% for lista in lista %}
+		<tr>
+			<td>{{ lista.id_terapia }}</td>
+			<td>{{ lista.id_paciente }}</td>
+			<td>{{ lista.id_cita }}</td>
+			<td>{{ lista.recibida }}</td>
+			<td>
+				<a class="btn btn-primary" href="{% url 'crud:editar' lista.id_terapia %}"
+				>Editar</a>
+				<a class="btn btn-danger" href="{% url 'crud:eliminar' lista.id_terapia %}"
+				>Eliminar</a>
+
+			</td>
+		</tr>	
+		{% endfor %}
+
+		{% else %}		
+		<h1>No se encuentran registros de Terapias</h1>	
+
+		{% endif %}
+	</tbody>
+			
+</table>
+
+{% endblock %}
+
+
+
+
+
+
+

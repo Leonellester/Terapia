@@ -1,0 +1,50 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="es">
+        <head>
+        	{% block extrahead %}
+        	{% endblock %}
+          <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+        	<meta charset="UTF-8">
+            <title>{% block title %} Terapias CADEP {% endblock %}</title>
+        </head>
+        <body>
+
+        	{% block header %}
+             <h4>CRUD Terapias CADEP</h4>
+            {% endblock %}
+
+       	 <div class="container">
+
+			{% block navbar %}
+		
+		                  	
+				<ul class="dropdown-menu" role="menu">
+          <li><a href="{% url 'crud:index' %}">INICIO</a></li>
+				    <li><a href="{% url 'crud:consultar' %}">Consultar Terapias</a></li>
+				    <li><a href="{% url 'crud:insertar' %}">Insertar Terapias</a></li>
+				 </ul>                        
+		                      		
+		                    	
+		                
+    	</div>    
+
+			{% endblock %}
+
+
+           
+
+           {% block content %}
+            <h5>________________________</h5>
+           {% endblock %}
+
+           {% block footer %}
+           <h5></h5>
+           {% endblock %}
+
+          <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+          <script src="{% static 'js/bootstrap.min.js' %}"></script>
+
+
+        </body>
+    </html>
