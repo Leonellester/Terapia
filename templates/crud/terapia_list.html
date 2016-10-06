@@ -7,9 +7,10 @@
 		<tr>
 			<td>#</td>
 			<td>Id_Terapia</td>
-			<td>Id_Paciente</td>
-			<td>Id_Cita</td>
-			<td>Recibida</td>
+			<td>Nombre</td>
+			<td>Descripcion</td>
+			<td>Limite</td>
+			<td>Estado</td>
 			<td>Acciones</td>
 		</tr>
 		
@@ -19,9 +20,10 @@
 		{% for lista in lista %}
 		<tr>
 			<td>{{ lista.id_terapia }}</td>
-			<td>{{ lista.id_paciente }}</td>
-			<td>{{ lista.id_cita }}</td>
-			<td>{{ lista.recibida }}</td>
+			<td>{{ lista.nombre }}</td>
+			<td>{{ lista.descripcion }}</td>
+			<td>{{ lista.limite }}</td>
+			<td>{{ lista.estado }}</td>
 			<td>
 				<a class="btn btn-primary" href="{% url 'crud:editar' lista.id_terapia %}"
 				>Editar</a>

@@ -9,22 +9,25 @@ class CrudForm(forms.ModelForm):
 
 			fields = [
 				'id_terapia',
-				'id_paciente',
-				'id_cita',
-				'recibida',
+				'nombre',
+				'descripcion',
+				'limite',
+				'estado',
 			]
 
 			labels = {
 				'id_terapia': 'id_terapia',
-				'id_paciente': 'id_paciente',
-				'id_cita': 'id_cita',
-				'recibida': 'recibida',
+				'nombre': 'nombre',
+				'descripcion': 'descripcion',
+				'limite': 'limite',
+				'estado': 'estado',
 			}
 
 			widgets = {
 				'id_terapia': forms.TextInput(attrs={'class':'form-control'}),
-				'id_paciente': forms.TextInput(attrs={'class':'form-control'}),
-				'id_cita': forms.TextInput(attrs={'class':'form-control'}),
-				'recibida': forms.TextInput(attrs={'class':'form-control'}),
+				'nombre': forms.TextInput(attrs={'class':'form-control'}),
+				'descripcion': forms.TextInput(attrs={'class':'form-control'}),
+				'limite': forms.TextInput(attrs={'class':'form-control'}),
+				'estado': forms.Select(attrs={'class':'form-control','id':'Inputestado'}),
 			}
 

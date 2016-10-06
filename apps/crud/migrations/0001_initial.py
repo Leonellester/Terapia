@@ -17,9 +17,10 @@ class Migration(migrations.Migration):
             name='Terapia',
             fields=[
                 ('id_terapia', models.IntegerField(primary_key=True, serialize=False)),
-                ('id_paciente', models.IntegerField()),
-                ('id_cita', models.IntegerField()),
-                ('recibida', models.CharField(max_length=2)),
+                ('nombre', models.CharField(max_length=10)),
+                ('descripcion', models.CharField(max_length=10)),
+                ('limite', models.IntegerField()),
+                ('estado', models.CharField(max_length=10)),
             ],
         ),
     ]
